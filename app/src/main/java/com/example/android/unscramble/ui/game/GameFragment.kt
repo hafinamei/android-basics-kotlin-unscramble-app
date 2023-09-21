@@ -77,6 +77,7 @@ class GameFragment : Fragment() {
             showFinalScoreDialog()
         }
     }
+
     private fun onSubmitWord() {
         val playerWord = binding.textInputEditText.text.toString()
 
