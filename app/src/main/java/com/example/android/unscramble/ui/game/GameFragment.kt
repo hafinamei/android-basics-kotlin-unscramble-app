@@ -41,6 +41,8 @@ class GameFragment : Fragment() {
     // If the fragment is re-created, it receives the same GameViewModel instance created by the
     // first fragment
 
+
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
@@ -108,6 +110,7 @@ class GameFragment : Fragment() {
         super.onDetach()
         Log.d("GameFragment", "GameFragment destroyed!")
     }
+
 
     /*
     * Sets and resets the text field error status.
