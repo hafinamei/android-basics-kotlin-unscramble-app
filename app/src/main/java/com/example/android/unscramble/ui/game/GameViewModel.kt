@@ -19,4 +19,9 @@ class GameViewModel : ViewModel() {
     init {
         Log.d("GameFragment", "GameViewModel created!")
     }
+    override fun onCleared() {
+        super.onCleared()
+        Log.d("GameFragment", "GameViewModel destroyed!")
+    }
+
 }
