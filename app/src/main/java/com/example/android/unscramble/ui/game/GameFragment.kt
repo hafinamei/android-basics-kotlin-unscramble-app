@@ -18,7 +18,7 @@ package com.example.android.unscramble.ui.game
 
 import android.os.Bundle
 import android.view.LayoutInflater
-
+import androidx.fragment.app.viewModels.
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -30,6 +30,8 @@ import com.example.android.unscramble.databinding.GameFragmentBinding
  */
 
 class GameFragment : Fragment() {
+
+    private val viewModel: GameViewModel by viewModels()
 
     private var score = 0
     private var currentWordCount = 0
