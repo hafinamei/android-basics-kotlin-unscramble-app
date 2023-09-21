@@ -18,6 +18,7 @@ package com.example.android.unscramble.ui.game
 
 import android.os.Bundle
 import android.view.LayoutInflater
+
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -27,6 +28,7 @@ import com.example.android.unscramble.databinding.GameFragmentBinding
 /**
  * Fragment where the game is played, contains the game logic.
  */
+
 class GameFragment : Fragment() {
 
     private var score = 0
@@ -62,6 +64,7 @@ class GameFragment : Fragment() {
         binding.wordCount.text = getString(
                 R.string.word_count, 0, MAX_NO_OF_WORDS)
     }
+
 
     /*
     * Checks the user's word, and updates the score accordingly.
