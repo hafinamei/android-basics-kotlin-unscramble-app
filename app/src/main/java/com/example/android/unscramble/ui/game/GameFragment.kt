@@ -159,6 +159,7 @@ class GameFragment : Fragment() {
             binding.textField.isErrorEnabled = false
             binding.textInputEditText.text = null
         }
+
     }
 
     /*
