@@ -45,7 +45,7 @@ class GameViewModel : ViewModel() {
             getNextWord()
         } else {
             _currentScrambledWord.value = String(tempWord)
-            ++_currentWordCount
+            _score.value = (_score.value)?.plus(SCORE_INCREASE)
             wordsList.add(currentWord)
         }
     }
@@ -54,7 +54,7 @@ class GameViewModel : ViewModel() {
     * Increases the game score if the player's word is correct.
     */
     private fun increaseScore() {
-        _score += SCORE_INCREASE
+        _score.value = (_score.value)?.plus(SCORE_INCREASE)
     }
     fun reinitializeData() {
         _score.value = 0
