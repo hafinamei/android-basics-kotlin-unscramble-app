@@ -19,12 +19,13 @@ package com.example.android.unscramble.ui.game
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import androidx.fragment.app.viewModels.
+import androidx.fragment.app.viewModels
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.android.unscramble.R
 import com.example.android.unscramble.databinding.GameFragmentBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 /**
  * Fragment where the game is played, contains the game logic.
@@ -73,13 +74,6 @@ class GameFragment : Fragment() {
     * Checks the user's word, and updates the score accordingly.
     * Displays the next scrambled word.
     */
-    private fun onSubmitWord() {
-        if (viewModel.nextWord()) {
-            updateNextWordOnScreen()
-        } else {
-            showFinalScoreDialog()
-        }
-    }
 
     private fun onSubmitWord() {
         val playerWord = binding.textInputEditText.text.toString()
