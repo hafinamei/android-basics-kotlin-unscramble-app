@@ -22,6 +22,7 @@ import android.view.LayoutInflater
 import androidx.fragment.app.viewModels
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.android.unscramble.R
 import com.example.android.unscramble.databinding.GameFragmentBinding
@@ -70,10 +71,7 @@ class GameFragment : Fragment() {
         binding.submit.setOnClickListener { onSubmitWord() }
         binding.skip.setOnClickListener { onSkipWord() }
         // Update the UI
-        viewModel.currentScrambledWord.observe(viewLifecycleOwner,
-            { newWord ->
-                binding.textViewUnscrambledWord.text = newWord
-            })
+
         viewModel.score.observe(viewLifecycleOwner,
             { newScore ->
                 binding.score.text = getString(R.string.score, newScore)
